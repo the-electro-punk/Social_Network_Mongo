@@ -37,7 +37,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/pizza-hun
 mongoose.set('debug', true);
 
 // this assigns the page to a specific port
-app.listen(3002, () => 
+app.listen(3005, () => 
     console.log(`App running on port 3002`)
 )
 // app.listen(PORT, () => {
