@@ -37,8 +37,8 @@ app.get('/', (req, res) => {
 mongoose.set('debug', true);
 
 // this assigns the page to a specific port
-app.listen(3005, () => 
-    console.log(`App running on port 3002`)
+app.listen(3021, () => 
+    console.log(`App running on port 3021`)
 )
 // app.listen(PORT, () => {
 //     console.log(`App running on port ${PORT}`);
