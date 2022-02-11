@@ -1,4 +1,5 @@
 // server outputs a webpage and runs application
+const Models = require('./MongoConnections.js')
 
 const express = require('express')
 const app = express()
@@ -27,11 +28,11 @@ app.get('/', (req, res) => {
     // res.status(500).json({message: 'Error'})
     // res.json({message: 'Error'})
 })
-
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/pizza-hunt', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// });
+// this sets up a database and connects to it; connect in MogoCompass afterwards
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/test_collection', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 // Use this to log mongo queries being executed!
 mongoose.set('debug', true);
